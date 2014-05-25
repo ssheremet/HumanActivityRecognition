@@ -34,7 +34,7 @@ run_analysis <- function() {
      colnames(finalSet) <- c(colNames,"Subject","activityKey")
      colnames(activityLabels) <- c("activityKey", "Activity")
      
-     ##merge data to achive descriptive activity names
+     ##merge data to achieve descriptive activity names
      data <- as.data.frame(merge(as.data.table(finalSet), as.data.table(activityLabels), by="activityKey"))
      
      ##drop activityKey column
