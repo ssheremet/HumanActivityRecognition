@@ -8,9 +8,7 @@ Project contains R script run_analysis.R which proceed raw data and create txt f
 In project used Human Activity Recognition Using Smartphones Dataset. You should unzip this dataset with keeping original foulder structure in folder with R-script:
 
 .\UCI HAR Dataset -> data root folder
-                |
-                |__\test -> test data
-                |
-                |__\train -> train data
+.\UCI HAR Dataset\test -> test data
+.\UCI HAR Dataset\train -> train data
 
 To get a tidy data file, at fist set folder with R-script and raw data as work directry, set run_analyses.R as source and run function run_analysis()
