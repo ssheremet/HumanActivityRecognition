@@ -27,7 +27,7 @@ run_analysis <- function() {
      finalTestSet <- cbind(testSubSet, testSubj, testLabels)
      finalTrainSet <- cbind(trainSubSet, trainSubj, trainLabels)
      
-     ##merge data test and train data sets
+     ##merge data from test and train data sets
      finalSet <- rbind(finalTestSet, finalTrainSet)
      
      ##set columns names
@@ -44,6 +44,7 @@ run_analysis <- function() {
      tidyData <- aggregate(data[,1:length(mean.std.Values)], by=list(data$Activity, data$Subject), FUN=mean)
      colnames(tidyData) <- c("Activity", "Subject", colNames)
      
+     ##write tidy data to file
      write.table(tidyData, "tidy_data.txt", row.names=FALSE, quote=FALSE, sep="\t")
      
      
